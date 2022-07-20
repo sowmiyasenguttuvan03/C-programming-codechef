@@ -1,0 +1,77 @@
+https://www.codechef.com/START48D/problems/FAIRPASS
+
+#include <stdio.h>
+
+int main()
+{
+    int T,N,K;
+    scanf("%d",&T);
+    for(int i=0;i<T;i++){
+        scanf("%d %d",&N,&K);
+        if(N<K){
+            printf("YES\n");
+        }
+        else{
+            printf("NO\n");
+        }
+    }
+    return 0;
+}
+
+
+https://www.codechef.com/START48D/problems/FILLCANDIES
+
+#include <stdio.h>
+
+int main()
+{
+    int T,N,K,M,A,B;
+    scanf("%d",&T);
+    for(int i=0;i<T;i++){
+        scanf("%d %d %d",&N,&K,&M);
+        A=1;
+        B=K*M;
+        if(B>=N){
+            printf("%d\n",A);
+        }
+        else{
+            while(B<N){
+                B=B+(K*M);
+                ++A;
+            }
+            printf("%d\n",A);
+        }
+    }
+    return 0;
+}
+
+
+https://www.codechef.com/START48D/problems/BUYLAMP
+
+#include <stdio.h>
+
+int main()
+{
+    int T,N,K,X,Y,B,A;
+    scanf("%d",&T);
+    for(int i=0;i<T;i++){
+        scanf("%d %d %d %d",&N,&K,&X,&Y);
+        B=K*X;
+        A=N-K;
+        if(A>0){
+            int C,D;
+            C=A*X;
+            D=A*Y;
+            if(C<=D){
+                printf("%d",B+C);
+            }
+            else{
+                printf("%d",B+D);
+            }
+        }
+        else{
+            printf("%d",B);
+        }
+    }
+    return 0;
+}
